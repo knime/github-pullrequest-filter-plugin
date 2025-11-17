@@ -1,4 +1,4 @@
-# Bitbucket Pull Requests filter
+# GitHub Pull Requests filter
 
 ## Introduction
 

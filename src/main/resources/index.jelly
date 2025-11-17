@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <div>
-Filter multibranch Bitbucket Pull Requests
+Filter multibranch GitHub Pull Requests
 </div>

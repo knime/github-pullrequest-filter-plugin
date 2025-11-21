@@ -71,11 +71,9 @@ public class PullRequestSourceBranchMatchesFilterTest {
     @Before
     public void setUp() throws Throwable {
         when(taskListener.getLogger()).thenReturn(logger);
-//        when(pullRequest.getId()).thenReturn(1l);
         when(pullRequest.getHead()).thenReturn(branch);
         when(scmSourceRequest.listener()).thenReturn(taskListener);
         when(scmSourceRequest.getPullRequests()).thenReturn(Arrays.asList(pullRequest));
-//        when(scmSourceRequest.getPullRequestById(1)).thenReturn(pullRequest);
     }
     
     private void setupBranchNameMock(String branchName) {

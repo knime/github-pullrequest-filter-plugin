@@ -32,7 +32,6 @@ import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
-import org.jenkinsci.plugins.github.pullrequests.filter.filters.branch.PullRequestTargetBranchNotMatchesFilter;
 import org.jenkinsci.plugins.github.pullrequests.filter.utils.filters.StringFilter;
 import org.jenkinsci.plugins.github_branch_source.GitHubSCMSourceRequest;
 import org.jenkinsci.plugins.github_branch_source.PullRequestSCMHead;

@@ -41,7 +41,7 @@ import org.kohsuke.accmod.restrictions.NoExternalUse;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.NonNull;
 import java.util.regex.Pattern;
 
 /**
@@ -92,7 +92,7 @@ public class PullRequestNameFilterTrait extends SCMSourceTrait {
      * {@inheritDoc}
      */
     @Override
-    public boolean includeCategory(@Nonnull SCMHeadCategory category) {
+    public boolean includeCategory(@NonNull SCMHeadCategory category) {
         return category.isUncategorized();
     }
 
@@ -143,7 +143,7 @@ public class PullRequestNameFilterTrait extends SCMSourceTrait {
          *
          * @return the strategy options.
          */
-        @Nonnull
+        @NonNull
         @Restricted(NoExternalUse.class)
         @SuppressWarnings("unused") // stapler
         public ListBoxModel doFillStrategyIdItems() {
@@ -164,7 +164,7 @@ public class PullRequestNameFilterTrait extends SCMSourceTrait {
          * @param testMatcher The subject to validate by the pattern or the phrase
          * @return validation status
          */
-        @Nonnull
+        @NonNull
         @Restricted(NoExternalUse.class)
         public FormValidation doTestPhrase(@QueryParameter("phrase") final String phrase,
                                            @QueryParameter("ignoreCase") final boolean ignoreCase,

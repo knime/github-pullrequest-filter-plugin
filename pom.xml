@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.69</version>
+        <version>5.28</version>
         <relativePath />
     </parent>
 
@@ -22,7 +22,8 @@
         <sonar.organization>knime</sonar.organization>
 
         <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
-        <jenkins.version>2.361.4</jenkins.version>
+        <jenkins.baseline>2.528</jenkins.baseline>
+        <jenkins.version>${jenkins.baseline}.1</jenkins.version>
 
     </properties>
 
@@ -108,16 +109,22 @@
         </dependency>
     </dependencies>
 
-    <dependencyManagement>
+<dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.361.x</artifactId>
-                <version>2102.v854b_fec19c92</version>
+                <artifactId>bom-2.528.x</artifactId>
+                <version>5681.v79d2ddf61465</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
-        </dependencies>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>findbugs-annotations</artifactId>
+            <version>3.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
     </dependencyManagement>
     <build>
         <pluginManagement>

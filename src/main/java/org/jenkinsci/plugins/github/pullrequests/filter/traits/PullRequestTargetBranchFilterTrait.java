@@ -25,7 +25,7 @@ package org.jenkinsci.plugins.github.pullrequests.filter.traits;
 
 import java.util.regex.Pattern;
 
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.NonNull;
 
 import org.jenkinsci.plugins.github.pullrequests.filter.filters.branch.PullRequestTargetBranchMatchesFilter;
 import org.jenkinsci.plugins.github.pullrequests.filter.filters.branch.PullRequestTargetBranchNotMatchesFilter;
@@ -94,7 +94,7 @@ public class PullRequestTargetBranchFilterTrait extends SCMSourceTrait {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean includeCategory(@Nonnull SCMHeadCategory category) {
+	public boolean includeCategory(@NonNull SCMHeadCategory category) {
 		return category.isUncategorized();
 	}
 
@@ -146,7 +146,7 @@ public class PullRequestTargetBranchFilterTrait extends SCMSourceTrait {
 		 *
 		 * @return the strategy options.
 		 */
-		@Nonnull
+		@NonNull
 		@Restricted(NoExternalUse.class)
 		@SuppressWarnings("unused") // stapler
 		public ListBoxModel doFillStrategyIdItems() {
@@ -167,7 +167,7 @@ public class PullRequestTargetBranchFilterTrait extends SCMSourceTrait {
 		 * @param testMatcher The subject to validate by the pattern or the phrase
 		 * @return validation status
 		 */
-		@Nonnull
+		@NonNull
 		@Restricted(NoExternalUse.class)
 		public FormValidation doTestPhrase(@QueryParameter("phrase") final String phrase,
 				@QueryParameter("ignoreCase") final boolean ignoreCase, @QueryParameter("regex") final boolean regex,

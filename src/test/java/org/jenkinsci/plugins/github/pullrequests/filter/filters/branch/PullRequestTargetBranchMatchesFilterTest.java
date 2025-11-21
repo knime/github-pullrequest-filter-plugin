@@ -23,12 +23,15 @@
  */
 package org.jenkinsci.plugins.github.pullrequests.filter.filters.branch;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.mockito.Mockito.when;
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
-import org.jenkinsci.plugins.github.pullrequests.filter.filters.branch.PullRequestTargetBranchMatchesFilter;
 import org.jenkinsci.plugins.github.pullrequests.filter.utils.filters.StringFilter;
 import org.jenkinsci.plugins.github_branch_source.GitHubSCMSourceRequest;
 import org.jenkinsci.plugins.github_branch_source.PullRequestSCMHead;
@@ -38,15 +41,10 @@ import org.junit.runner.RunWith;
 import org.kohsuke.github.GHCommitPointer;
 import org.kohsuke.github.GHPullRequest;
 import org.mockito.Mock;
-
+import org.mockito.junit.MockitoJUnitRunner;
 
 import hudson.model.TaskListener;
 import jenkins.scm.api.trait.SCMHeadFilter;
-import org.mockito.junit.MockitoJUnitRunner;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
-import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PullRequestTargetBranchMatchesFilterTest {

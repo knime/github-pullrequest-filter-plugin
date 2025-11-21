@@ -33,7 +33,7 @@ import org.jenkinsci.plugins.github_branch_source.GitHubSCMSourceRequest;
 import org.jenkinsci.plugins.github_branch_source.PullRequestSCMHead;
 import org.kohsuke.github.GHPullRequest;
 
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.NonNull;
 import java.io.IOException;
 
 /**
@@ -59,7 +59,7 @@ public abstract class AbstractPullRequestFilter<T> extends SCMHeadFilter {
      * {@inheritDoc}
      */
     @Override
-    public boolean isExcluded(@Nonnull SCMSourceRequest request, @Nonnull SCMHead head) throws IOException, InterruptedException {
+    public boolean isExcluded(@NonNull SCMSourceRequest request, @NonNull SCMHead head) throws IOException, InterruptedException {
     	
         if (request instanceof GitHubSCMSourceRequest && head instanceof PullRequestSCMHead) {
             GitHubSCMSourceRequest req = (GitHubSCMSourceRequest) request;
